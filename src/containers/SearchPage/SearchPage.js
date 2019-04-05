@@ -3,6 +3,7 @@ import { Container, ListGroup } from "react-bootstrap";
 import uniqueId from "lodash/uniqueId";
 
 import Header from "../../components/Header/Header";
+import SearchHeader from "../../components/SearchHeader/searchHeader";
 import SearchForm from "../../components/SearchForm/SearchForm";
 import ShopInList from "../../components/Shop/ShopInList";
 import ShopFull from "../../components/Shop/ShopFull";
@@ -84,6 +85,7 @@ class SearchPage extends Component {
     return (
       <>
         <Header title={"Поиск"} onPressBack={this.goMainPage} />
+        <SearchHeader />
         <Container style={{ padding: "3vh", paddingTop: "7vh" }}>
           <SearchForm
             {...this.props}
