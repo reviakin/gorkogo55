@@ -25,7 +25,7 @@ const App = props => {
     setLoading(true);
     Tabletop.init({
       key: spreadSheetKey,
-      callback: googleData => setDataFromGS(googleData),
+      callback: setDataFromGS,
       simpleSheet: true
     });
   }, []);
