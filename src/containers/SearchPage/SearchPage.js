@@ -30,7 +30,7 @@ const SearchPage = props => {
         .toLowerCase()
         .includes(props.searchValue.toLowerCase()) ||
       item.category.toLowerCase().includes(props.searchValue.toLowerCase()) ||
-      Number(item.number) == Number(props.searchValue)
+      Number(item.number) === Number(props.searchValue)
     );
   };
 

@@ -11,7 +11,7 @@ const header = ({ goBack = alert("wrong"), title = "Горького55", history
       <FaAngleLeft />
     </Link>
   );
-  if (pathname == "/search") {
+  if (pathname === "/search") {
     goBackElement = (
       <a href="http://gorkogo55.ru/">
         <FaAngleLeft />
@@ -23,7 +23,7 @@ const header = ({ goBack = alert("wrong"), title = "Горького55", history
       className={[classes.Brown, classes.BoxShadow, classes.Header].join(" ")}
     >
       <div
-        onClick={pathname != "/search" ? goBack : null}
+        onClick={pathname !== "/search" ? goBack : null}
         className={classes.Icon}
       >
         {goBackElement}
