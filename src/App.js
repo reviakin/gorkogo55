@@ -5,6 +5,7 @@ import Tabletop from "tabletop";
 import MainPage from "./containers/MainPage/MainPage";
 import SearchPage from "./containers/SearchPage/SearchPage";
 import ShopPage from "./containers/ShopPage/ShopPage";
+import YMInformer from "./components/YM/index";
 import testData from "./data/shops.json";
 
 import classes from "./App.module.css";
@@ -92,29 +93,7 @@ const App = props => {
         </Switch>
       </main>
       <footer>
-        {/* Yandex.Metrika informer */}
-        <section className={[classes.Black, classes.BoxShadow].join(" ")}>
-          <a
-            href="https://metrika.yandex.ru/stat/?id=53046907&amp;from=informer"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://informer.yandex.ru/informer/53046907/3_1_FFFFFFFF_FFFFFFFF_0_pageviews"
-              style={{
-                width: "88px",
-                height: "31px",
-                border: 0
-              }}
-              alt="Яндекс.Метрика"
-              title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
-              className="ym-advanced-informer"
-              data-cid="53046907"
-              data-lang="ru"
-            />
-          </a>
-        </section>
-        {/* /Yandex.Metrika informer */}
+        <YMInformer />
       </footer>
     </div>
   );
