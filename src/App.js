@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 import Tabletop from "tabletop";
-import ym from "react-yandex-metrika";
-import { YMInitializer } from "react-yandex-metrika";
 
 import MainPage from "./containers/MainPage/MainPage";
 import SearchPage from "./containers/SearchPage/SearchPage";
@@ -44,7 +42,6 @@ const App = props => {
 
   const changeSearchValue = event => {
     setSearchValue(event.target.value);
-    ym(54289579, "reachGoal", "useInput");
   };
 
   const clearSearchValue = () => {
@@ -119,7 +116,6 @@ const App = props => {
         </section>
         {/* /Yandex.Metrika informer */}
       </footer>
-      <YMInitializer accounts={[53046907]} />
     </div>
   );
 };
